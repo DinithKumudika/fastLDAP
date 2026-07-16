@@ -1,0 +1,50 @@
+[package]
+name = "fastldap"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name"]
+description = "High-performance LDAP server in Rust"
+
+[dependencies]
+# Async runtime
+tokio = { version = "1.35", features = ["full"] }
+
+# Concurrent data structures
+dashmap = "5.5"           # Lock-free concurrent hash map
+parking_lot = "0.12"      # Faster synchronization primitives
+
+# Serialization/Encoding
+bytes = "1.5"             # Byte buffer management
+nom = "7.1"               # Parser combinator for BER
+
+# Error handling
+thiserror = "1.0"         # Derive Error trait
+anyhow = "1.0"            # Ergonomic error handling
+
+# Configuration
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.8"              # Config file parsing
+
+# Logging/Metrics
+tracing = "0.1"           # Structured logging
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+metrics = "0.22"          # Metrics collection
+metrics-exporter-prometheus = "0.13"
+
+# CLI
+clap = { version = "4.4", features = ["derive"] }
+
+# LDAPS support
+rustls = "0.22"
+tokio-rustls = "0.25"
+rustls-pemfile = "2.1"
+
+[dev-dependencies]
+tokio-test = "0.4"
+criterion = { version = "0.5", features = ["async_tokio"] }
+proptest = "1.4"          # Property testing
+ldap3 = "0.11"            # For integration testing against ourselves
+
+[[bench]]
+name = "ldap_benchmark"
+harness = false
