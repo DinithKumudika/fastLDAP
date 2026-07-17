@@ -5,7 +5,7 @@ use std::sync::Arc;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    tracing_subscriber::fmt::init();
+    fastldap::utils::logger::init_logger();
     
     let backend = Arc::new(MemoryBackend::new());
     

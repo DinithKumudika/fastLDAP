@@ -1,4 +1,4 @@
-use crate::error::Result;
+use crate::utils::error::Result;
 use crate::protocol::bind::{BindRequest, AuthenticationChoice, BindResponse};
 use crate::protocol::result::{LdapResult, ResultCode};
 use crate::store::backend::Backend;

@@ -1,4 +1,4 @@
-use crate::error::{Result, LdapError};
+use crate::utils::error::{Result, LdapError};
 use super::types::*;
 
 pub fn parse_filter(input: &str) -> Result<Filter> {

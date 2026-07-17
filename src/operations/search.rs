@@ -1,4 +1,4 @@
-use crate::error::Result;
+use crate::utils::error::Result;
 use crate::protocol::search::{SearchRequest, SearchResultEntry, PartialAttribute, Scope};
 use crate::store::backend::Backend;
 use crate::store::entry::DirectoryEntry;

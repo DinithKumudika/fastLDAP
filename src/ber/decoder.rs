@@ -3,7 +3,7 @@ use nom::{
     number::streaming::be_u8,
     IResult,
 };
-use crate::error::BerError;
+use crate::utils::error::BerError;
 use super::types::*;
 
 pub struct BerDecoder<'a> {

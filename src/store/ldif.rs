@@ -1,4 +1,4 @@
-use crate::error::Result;
+use crate::utils::error::Result;
 use super::entry::DirectoryEntry;
 use super::backend::Backend;
 

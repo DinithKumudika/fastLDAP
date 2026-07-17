@@ -51,7 +51,7 @@ To connect Keycloak:
 
 ## Future Roadmap
 
-- [ ] Support for LDAP Add, Delete, Modify, and ModifyDN operations.
+- [x] Support for LDAP Add, Delete, Modify, and ModifyDN operations.
 - [ ] Persistent storage backends (e.g., RocksDB).
 - [ ] Advanced SASL authentication (GSSAPI, SCRAM).
 - [ ] Strict LDAP schema validation.
